@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hamburg Marathon 2027 Invitation</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Exclusive invitation to run the Hamburg Marathon 2027 with full package registration, cheer crew, running partner, and marathon goal support.">
+  
+  <!-- Premium Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Canvas Confetti CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+  <!-- External Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <div class="badge">
+      <span></span>Hamburg Marathon 2027
+    </div>
+
+    <h1>You are invited to run the <span class="gradient">Hamburg Marathon 2027!</span></h1>
+    <p class="subtitle">An ultimate birthday challenge package curated to push your boundaries and celebrate together on the streets of Hamburg.</p>
+
+    <!-- Package Grid -->
+    <div class="package-grid">
+      <!-- Item 1: Registration -->
+      <div class="card">
+        <span class="card-icon">🎟️</span>
+        <h2 class="card-title">Full Registration Covered</h2>
+        <p class="card-desc">All-expenses paid entry to the official Hamburg Marathon 2027. We handle the finances, you handle the road! <span class="inline-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span> Sign up, tell us the price, you get reimbursed 100%!</p>
+      </div>
+
+      <!-- Item 2: Shirt -->
+      <div class="card">
+        <span class="card-icon">🎽</span>
+        <h2 class="card-title">Official Event T-Shirt</h2>
+        <p class="card-desc">Your gear package includes the official Hamburg Marathon 2027 t-shirt, so you look the part from start to finish.</p>
+      </div>
+
+      <!-- Item 3: Running Partner -->
+      <div class="card">
+        <span class="card-icon">🏃‍♂️</span>
+        <h2 class="card-title">Co-Runner Support</h2>
+        <p class="card-desc">Papa will run with you providing support, taking pictures, and trying to stay up with you to the finish so we both achieve the sub 4:30:00 goal.</p>
+      </div>
+
+      <!-- Item 4: Cheering Squad -->
+      <div class="card">
+        <span class="card-icon">📣</span>
+        <h2 class="card-title">Dedicated Cheer Crew</h2>
+        <p class="card-desc">Gisi and Karla will be stationed along the route, bringing the loudest cheers and positive energy to push you through.</p>
+      </div>
+
+      <!-- Item 5: Gels (Double column wide) -->
+      <div class="card span-full goal-widget">
+        <div class="goal-header">
+          <span class="card-icon" style="margin: 0;">⚡</span>
+          <span class="goal-badge">Sub 4:30 Challenge</span>
+        </div>
+        <h2 class="card-title">Unlimited Performance Gels</h2>
+        <p class="card-desc" style="margin-bottom: 1rem;">
+          You are entitled to as many gels as you need to help you stay fueled and break the next marathon goal: <strong>below 04:30:00!</strong> 
+          <br><br><em>(3 premium gels are included inside your birthday package)</em>.
+        </p>
+        <div style="display: flex; align-items: baseline; gap: 1rem; flex-wrap: wrap;">
+          <div class="timer-display" style="margin: 0;">04:29:59</div>
+          <span style="font-weight: 800; color: var(--accent-cyan); font-size: 1.5rem; letter-spacing: 0.05em; text-transform: uppercase;">Let's do this!</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- RSVP CTA Button -->
+    <div class="rsvp-section">
+      <button class="rsvp-btn" id="rsvpBtn" onclick="triggerAcceptance()">
+        Accept The Challenge 🏃‍♂️
+      </button>
+    </div>
+
+    <!-- Countdown Timer -->
+    <div class="countdown-container">
+      <div class="countdown-title">Countdown to Race Day</div>
+      <div class="countdown-grid">
+        <div class="countdown-item">
+          <span class="countdown-val" id="days">--</span>
+          <span class="countdown-lbl">Days</span>
+        </div>
+        <div class="countdown-item">
+          <span class="countdown-val" id="hours">--</span>
+          <span class="countdown-lbl">Hrs</span>
+        </div>
+        <div class="countdown-item">
+          <span class="countdown-val" id="minutes">--</span>
+          <span class="countdown-lbl">Mins</span>
+        </div>
+        <div class="countdown-item">
+          <span class="countdown-val" id="seconds">--</span>
+          <span class="countdown-lbl">Secs</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Success Popup -->
+  <div class="success-overlay" id="successOverlay">
+    <div class="success-card">
+      <span style="font-size: 3rem;">🔥</span>
+      <h2 class="success-title">Challenge Accepted!</h2>
+      <p class="success-desc">
+        Awesome! Let the training begin. We're breaking the sub-04:30:00 barrier together in Hamburg! Papa, Gisi, and Karla are ready.
+      </p>
+      <button class="close-btn" onclick="closeOverlay()">Close</button>
+    </div>
+  </div>
+
+  <!-- External JavaScript Logic -->
+  <script src="app.js" defer></script>
+</body>
+</html>
